@@ -1,0 +1,52 @@
+package com.mycompany.github;
+import java.util.Scanner;
+class DAW {
+    private String institut;
+    private double mediaAlumnes;
+    public DAW() {
+        this.institut = "EmiliDarder";
+        this.mediaAlumnes = 0;
+    }
+    public String getInstitut() {
+        return institut;
+    }
+    public void setInstitut(String institut) {
+        this.institut = institut;
+    }
+    public double getMediaAlumnes() {
+        return mediaAlumnes;
+    }
+    public void setMediaAlumnes(double mediaAlumnes) {
+        this.mediaAlumnes = mediaAlumnes;
+    }
+    public static double calcularMediaAlumnes(double[] notes) {
+        double suma = 0;
+        for (double nota : notes) {
+            suma += nota;
+        }
+        return notes.length > 0 ? suma / notes.length : 0;
+    }
+}
+class BaseDades extends DAW {
+    private int numAlumnes;
+    private String professor;
+    public BaseDades() {
+        super();
+        this.numAlumnes = 0;
+        this.professor = "";
+    }
+    public int getNumAlumnes() {
+        return numAlumnes;
+    }
+    public void setNumAlumnes(int numAlumnes) {
+        this.numAlumnes = numAlumnes;
+    }
+    public String getProfessor() {
+        return professor;
+    }
+    public void setProfessor(String professor) {
+        this.professor = professor;
+    }
+}
+class Programació extends DAW {
+ }
